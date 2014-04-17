@@ -1,24 +1,3 @@
-# MesosSchedulerDriver(Java) enters zombie state
-
-This repo is created to show you how MesosSchedulerDriver keeps trying to connect Zookeeper even after MesosSchedulerDriver.run() successfully returned with DRIVER_STOPPED.
-
-This issue seems to reproduce when Zookeeper died suddenly.  Master detector seems to enter zombie state.
-
-## How to run this program
-```
-$ mvn package
-
-# start zookeeper and mesos-master/slave
-# make sure that mesos-master runs on zk://localhost:2181/mesos
-
-$ ./bin/start zk://localhost:2181/mesos
-
-# follow the instructions which will be printed.
-```
-
-## Sample console log (sample_log.txt)
-```
-$ ./bin/start zk://localhost:2181/mesos
 MESOS_NATIVE_LIBRARY is not set. Searching in /usr/lib /usr/local/lib.
 MESOS_NATIVE_LIBRARY is set to /usr/local/lib/libmesos.so
 
@@ -125,4 +104,3 @@ INFO:
 2014-04-17 17:19:53,089:2626(0x7fece2ff5700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
 2014-04-17 17:19:56,427:2626(0x7fece2ff5700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
 ... still going on ...
-```
