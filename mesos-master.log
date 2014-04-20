@@ -1,0 +1,103 @@
+I0420 10:44:36.164026 1956643600 main.cpp:127] Build: 2014-04-18 11:55:58 by shingo
+I0420 10:44:36.164155 1956643600 main.cpp:129] Version: 0.18.0
+I0420 10:44:36.164168 1956643600 main.cpp:132] Git tag: 0.18.0
+I0420 10:44:36.164172 1956643600 main.cpp:136] Git SHA: 185dba5d8d52034ac6a8e29c2686f0f7dc4cf102
+2014-04-20 10:44:36,164:57712(0x10d1f0000):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2014-04-20 10:44:36,164:57712(0x10d1f0000):ZOO_INFO@log_env@716: Client environment:host.name=Shingo-no-MacBook-Pro.local
+2014-04-20 10:44:36,164:57712(0x10d1f0000):ZOO_INFO@log_env@723: Client environment:os.name=Darwin
+2014-04-20 10:44:36,164:57712(0x10d1f0000):ZOO_INFO@log_env@724: Client environment:os.arch=13.1.0
+2014-04-20 10:44:36,164:57712(0x10d1f0000):ZOO_INFO@log_env@725: Client environment:os.version=Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64
+2014-04-20 10:44:36,164:57712(0x10d1f0000):ZOO_INFO@log_env@733: Client environment:user.name=shingo
+2014-04-20 10:44:36,164:57712(0x10d3fc000):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2014-04-20 10:44:36,164:57712(0x10d3fc000):ZOO_INFO@log_env@716: Client environment:host.name=Shingo-no-MacBook-Pro.local
+2014-04-20 10:44:36,164:57712(0x10d3fc000):ZOO_INFO@log_env@723: Client environment:os.name=Darwin
+2014-04-20 10:44:36,164:57712(0x10d3fc000):ZOO_INFO@log_env@724: Client environment:os.arch=13.1.0
+2014-04-20 10:44:36,164:57712(0x10d3fc000):ZOO_INFO@log_env@725: Client environment:os.version=Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64
+2014-04-20 10:44:36,164:57712(0x10d3fc000):ZOO_INFO@log_env@733: Client environment:user.name=shingo
+I0420 10:44:36.164801 1956643600 main.cpp:178] Starting Mesos master
+2014-04-20 10:44:36,165:57712(0x10d1f0000):ZOO_INFO@log_env@741: Client environment:user.home=/Users/shingo
+2014-04-20 10:44:36,165:57712(0x10d3fc000):ZOO_INFO@log_env@741: Client environment:user.home=/Users/shingo
+2014-04-20 10:44:36,165:57712(0x10d3fc000):ZOO_INFO@log_env@753: Client environment:user.dir=/Users/shingo/mesos/sbin
+2014-04-20 10:44:36,165:57712(0x10d1f0000):ZOO_INFO@log_env@753: Client environment:user.dir=/Users/shingo/mesos/sbin
+2014-04-20 10:44:36,165:57712(0x10d3fc000):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x10bf02cf0 sessionId=0 sessionPasswd=<null> context=0x7ff4a2424d20 flags=0
+2014-04-20 10:44:36,165:57712(0x10d1f0000):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x10bf02cf0 sessionId=0 sessionPasswd=<null> context=0x7ff4a3800af0 flags=0
+I0420 10:44:36.165290 1956643600 master.cpp:240] Master ID: 20140420-104436-18983104-5050-57712 Hostname: 192.168.33.1
+I0420 10:44:36.165328 219598848 master.cpp:322] Master started on 192.168.33.1:5050
+I0420 10:44:36.165343 219598848 master.cpp:332] Master allowing unauthenticated frameworks to register!!
+2014-04-20 10:44:36,166:57712(0x10e80a000):ZOO_INFO@check_events@1703: initiated connection to server [127.0.0.1:2181]
+2014-04-20 10:44:36,166:57712(0x10e704000):ZOO_INFO@check_events@1703: initiated connection to server [127.0.0.1:2181]
+I0420 10:44:36.167219 220135424 contender.cpp:127] Joining the ZK group
+2014-04-20 10:44:36,188:57712(0x10e704000):ZOO_INFO@check_events@1750: session establishment complete on server [127.0.0.1:2181], sessionId=0x145803d4a970000, negotiated timeout=10000
+I0420 10:44:36.188181 221208576 group.cpp:310] Group process ((3)@192.168.33.1:5050) connected to ZooKeeper
+I0420 10:44:36.188210 221208576 group.cpp:778] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I0420 10:44:36.188225 221208576 group.cpp:382] Trying to create path '/mesos' in ZooKeeper
+2014-04-20 10:44:36,191:57712(0x10e80a000):ZOO_INFO@check_events@1750: session establishment complete on server [127.0.0.1:2181], sessionId=0x145803d4a970001, negotiated timeout=10000
+I0420 10:44:36.192046 222281728 group.cpp:310] Group process ((5)@192.168.33.1:5050) connected to ZooKeeper
+I0420 10:44:36.192078 222281728 group.cpp:778] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I0420 10:44:36.192090 222281728 group.cpp:382] Trying to create path '/mesos' in ZooKeeper
+I0420 10:44:36.210420 219062272 contender.cpp:243] New candidate (id='10') has entered the contest for leadership
+I0420 10:44:36.213407 222281728 detector.cpp:134] Detected a new leader: (id='9')
+I0420 10:44:36.213568 221208576 group.cpp:655] Trying to get '/mesos/info_0000000009' in ZooKeeper
+I0420 10:44:36.215607 222281728 detector.cpp:377] A new leading master (UPID=master@192.168.33.1:5050) is detected
+I0420 10:44:36.215674 219598848 master.cpp:760] The newly elected leader is master@192.168.33.1:5050 with id 20140420-104048-18983104-5050-55787
+I0420 10:44:42.005453 222281728 detector.cpp:134] Detected a new leader: (id='10')
+I0420 10:44:42.005607 219598848 group.cpp:655] Trying to get '/mesos/info_0000000010' in ZooKeeper
+I0420 10:44:42.006120 221208576 detector.cpp:377] A new leading master (UPID=master@192.168.33.1:5050) is detected
+I0420 10:44:42.006214 221745152 master.cpp:760] The newly elected leader is master@192.168.33.1:5050 with id 20140420-104436-18983104-5050-57712
+I0420 10:44:42.006229 221745152 master.cpp:770] Elected as the leading master!
+I0420 10:44:44.259871 220135424 master.cpp:1936] Attempting to re-register slave 20140420-104048-18983104-5050-55787-0 at slave(1)@192.168.33.1:5051 (192.168.33.1)
+I0420 10:44:44.259891 220135424 master.cpp:2818] Adding slave 20140420-104048-18983104-5050-55787-0 at 192.168.33.1 with cpus(*):8; mem(*):15360; disk(*):710534; ports(*):[31000-32000]
+I0420 10:44:44.260205 221745152 hierarchical_allocator_process.hpp:445] Added slave 20140420-104048-18983104-5050-55787-0 (192.168.33.1) with cpus(*):8; mem(*):15360; disk(*):710534; ports(*):[31000-32000] (and cpus(*):8; mem(*):15360; disk(*):710534; ports(*):[31000-32000] available)
+I0420 10:44:58.840800 222281728 master.cpp:906] Re-registering framework mesos-scheduler-check-dummy-0.0.1 at scheduler(1)@192.168.33.1:60717
+I0420 10:44:58.841001 222818304 hierarchical_allocator_process.hpp:332] Added framework mesos-scheduler-check-dummy-0.0.1
+I0420 10:44:58.841297 221745152 master.cpp:2285] Sending 1 offers to framework mesos-scheduler-check-dummy-0.0.1
+2014-04-20 10:45:23,408:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1721: Socket [127.0.0.1:2181] zk retcode=-4, errno=64(Host is down): failed while receiving a server response
+2014-04-20 10:45:23,408:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1721: Socket [127.0.0.1:2181] zk retcode=-4, errno=64(Host is down): failed while receiving a server response
+2014-04-20 10:45:23,408:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:23,408:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+I0420 10:45:23.408792 220135424 group.cpp:415] Lost connection to ZooKeeper, attempting to reconnect ...
+I0420 10:45:23.408808 221745152 group.cpp:415] Lost connection to ZooKeeper, attempting to reconnect ...
+2014-04-20 10:45:23,408:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:23,408:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,742:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,742:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,743:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,743:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,743:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,743:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57712(0x10e704000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57712(0x10e80a000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+W0420 10:45:33.409865 221745152 group.cpp:453] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=145803d4a970000) expiration
+W0420 10:45:33.409886 220672000 group.cpp:453] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=145803d4a970001) expiration
+I0420 10:45:33.409895 221745152 group.cpp:469] ZooKeeper session expired
+I0420 10:45:33.409909 220672000 group.cpp:469] ZooKeeper session expired
+I0420 10:45:33.410040 220135424 detector.cpp:134] Detected a new leader: None
+I0420 10:45:33.410137 222818304 contender.cpp:192] Membership cancelled: 10
+I0420 10:45:33.410246 219598848 master.cpp:760] The newly elected leader is None
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@zookeeper_close@2522: Freeing zookeeper resources for sessionId=0x145803d4a970001
+
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@zookeeper_close@2522: Freeing zookeeper resources for sessionId=0x145803d4a970000
+
+Lost leadership... committing suicide!2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@716: Client environment:host.name=Shingo-no-MacBook-Pro.local
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@716: Client environment:host.name=Shingo-no-MacBook-Pro.local
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@723: Client environment:os.name=Darwin
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@724: Client environment:os.arch=13.1.0
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@723: Client environment:os.name=Darwin
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@725: Client environment:os.version=Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@724: Client environment:os.arch=13.1.0
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@733: Client environment:user.name=shingo
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@725: Client environment:os.version=Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@733: Client environment:user.name=shingo
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@741: Client environment:user.home=/Users/shingo
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@741: Client environment:user.home=/Users/shingo
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@log_env@753: Client environment:user.dir=/Users/shingo/mesos/sbin
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@log_env@753: Client environment:user.dir=/Users/shingo/mesos/sbin
+2014-04-20 10:45:33,410:57712(0x10d379000):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x10bf02cf0 sessionId=0 sessionPasswd=<null> context=0x7ff4a3800af0 flags=0
+2014-04-20 10:45:33,410:57712(0x10d273000):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x10bf02cf0 sessionId=0 sessionPasswd=<null> context=0x7ff4a2424d20 flags=0

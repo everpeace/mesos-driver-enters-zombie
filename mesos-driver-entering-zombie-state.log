@@ -1,0 +1,121 @@
+MESOS_NATIVE_LIBRARY is set to /Users/shingo/mesos/lib/libmesos.dylib
+
+################################################################################
+ This program shows you MesosSchedulerDriver keeps trying to connect Zookeeper
+ even after MesosSchedulerDriver.run() successfully returned with DRIVER_STOPPED.
+ (Master detector seems to enter zombie state.)
+
+[STEPS]
+ 1. Make sure that mesos-master runs on zk://localhost:2181/mesos.
+ 2. Press Enter
+ 3. Please wait until this program(framework) will be registered to mesos-master.
+ 4. After several seconds, Please kill Zookeeper.
+ 5. You will see MesosSchedulerDriver will stop with DRIVER_STOPPED.
+ 6. Logs which show it keeps trying to connect Zookeeper will be continued.
+    And this program never exits.
+ 7. If you re-started zookeeper, you will see master detector will detect new
+    master.
+################################################################################
+
+Press enter (Does mesos-master runs on zk://localhost:2181/mesos ??): <ENTER>
+
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@716: Client environment:host.name=Shingo-no-MacBook-Pro.local
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@723: Client environment:os.name=Darwin
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@724: Client environment:os.arch=13.1.0
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@725: Client environment:os.version=Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@733: Client environment:user.name=shingo
+I0420 10:44:58.833873 386510848 sched.cpp:121] Version: 0.18.0
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@741: Client environment:user.home=/Users/shingo
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@log_env@753: Client environment:user.dir=/Users/shingo/Documents/github/everpeace/mesos-driver-enters-zombie
+2014-04-20 10:44:58,833:57859(0x116b62000):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x115760cf0 sessionId=0 sessionPasswd=<null> context=0x7fba85800f60 flags=0
+2014-04-20 10:44:58,835:57859(0x11711e000):ZOO_INFO@check_events@1703: initiated connection to server [127.0.0.1:2181]
+2014-04-20 10:44:58,838:57859(0x11711e000):ZOO_INFO@check_events@1750: session establishment complete on server [127.0.0.1:2181], sessionId=0x145803d4a970003, negotiated timeout=10000
+I0420 10:44:58.838387 382107648 group.cpp:310] Group process ((2)@192.168.33.1:60717) connected to ZooKeeper
+I0420 10:44:58.838410 382107648 group.cpp:778] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I0420 10:44:58.838425 382107648 group.cpp:382] Trying to create path '/mesos' in ZooKeeper
+I0420 10:44:58.839577 381571072 detector.cpp:134] Detected a new leader: (id='10')
+I0420 10:44:58.839711 378351616 group.cpp:655] Trying to get '/mesos/info_0000000010' in ZooKeeper
+I0420 10:44:58.840322 380497920 detector.cpp:377] A new leading master (UPID=master@192.168.33.1:5050) is detected
+I0420 10:44:58.840404 378351616 sched.cpp:217] New master detected at master@192.168.33.1:5050
+I0420 10:44:58.840531 378351616 sched.cpp:225] No credentials provided. Attempting to register without authentication
+I0420 10:44:58.841135 380497920 sched.cpp:391] Framework registered with mesos-scheduler-check-dummy-0.0.1
+4 20, 2014 10:44:58 午前 mesos_driver_check.DummyScheduler registered
+INFO:
+###############################################################################
+ The framework is registered with FrameworkId=mesos-scheduler-check-dummy-0.0.1.
+ After several seconds, please stop Zookeeper.
+###############################################################################
+
+< Zookeeper was stopped manually at this point. >
+
+2014-04-20 10:45:23,279:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1721: Socket [127.0.0.1:2181] zk retcode=-4, errno=64(Host is down): failed while receiving a server response
+I0420 10:45:23.279997 382107648 group.cpp:415] Lost connection to ZooKeeper, attempting to reconnect ...
+2014-04-20 10:45:23,280:57859(0x11711e000):ZOO_INFO@check_events@1703: initiated connection to server [::1:2181]
+2014-04-20 10:45:23,408:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1721: Socket [::1:2181] zk retcode=-4, errno=54(Connection reset by peer): failed while receiving a server response
+2014-04-20 10:45:23,408:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,742:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,743:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:26,743:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:30,077:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+W0420 10:45:33.280174 378351616 group.cpp:453] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=145803d4a970003) expiration
+I0420 10:45:33.280206 378351616 group.cpp:469] ZooKeeper session expired
+I0420 10:45:33.280307 379961344 detector.cpp:134] Detected a new leader: None
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@zookeeper_close@2522: Freeing zookeeper resources for sessionId=0x145803d4a970003
+
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@716: Client environment:host.name=Shingo-no-MacBook-Pro.local
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@723: Client environment:os.name=Darwin
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@724: Client environment:os.arch=13.1.0
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@725: Client environment:os.version=Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@733: Client environment:user.name=shingo
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@741: Client environment:user.home=/Users/shingo
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@log_env@753: Client environment:user.dir=/Users/shingo/Documents/github/everpeace/mesos-driver-enters-zombie
+2014-04-20 10:45:33,280:57859(0x1168d3000):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=localhost:2181 sessionTimeout=10000 watcher=0x115760cf0 sessionId=0 sessionPasswd=<null> context=0x7fba83f02320 flags=0
+2014-04-20 10:45:33,281:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:33,281:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:33,281:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+4 20, 2014 10:45:33 午前 mesos_driver_check.DummyScheduler disconnected
+INFO:
+################################################################################
+ The framework is disconnected.  It will commit to suicide.
+################################################################################
+
+4 20, 2014 10:45:33 午前 mesos_driver_check.Main$ suicide
+INFO:
+################################################################################
+ Shutting down MesosSchdulerDriver.
+################################################################################
+
+I0420 10:45:33.283504 382107648 sched.cpp:233] No master detected
+I0420 10:45:33.283548 382107648 sched.cpp:730] Stopping framework 'mesos-scheduler-check-dummy-0.0.1'
+4 20, 2014 10:45:33 午前 mesos_driver_check.Main$$anonfun$2 apply
+INFO:
+################################################################################
+ MesosSchedulerDriver stopped with status DRIVER_STOPPED.
+ You will see it keeps trying to connect to Zookeeper and this program never
+ exit.  If you re-started Zookeeper, new master will be detected by master
+ detector.
+################################################################################
+
+2014-04-20 10:45:36,614:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:36,614:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:36,614:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:39,949:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:39,949:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:39,949:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:43,283:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:43,283:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:43,283:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:46,616:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:46,616:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:46,616:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:49,950:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:49,950:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:49,950:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:53,283:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [127.0.0.1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:53,283:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [fe80::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+2014-04-20 10:45:53,284:57859(0x11711e000):ZOO_ERROR@handle_socket_error_msg@1697: Socket [::1:2181] zk retcode=-4, errno=61(Connection refused): server refused to accept the client
+< identical outputs will continue.... >
