@@ -1,6 +1,6 @@
-# MesosSchedulerDriver(Java) enters zombie state
+# [[MESOS-1227]](https://issues.apache.org/jira/browse/MESOS-1227): MesosSchedulerDriver(Java) enters zombie state when Zookeeper suddenly dies.
 
-This repo is created to show you how MesosSchedulerDriver keeps trying to connect Zookeeper even after MesosSchedulerDriver.run() successfully returned with DRIVER_STOPPED.
+This repo is created to show you how MesosSchedulerDriver keeps trying to connect Zookeeper even after MesosSchedulerDriver.run() successfully returned with DRIVER_STOPPED [[MESOS-1227]](https://issues.apache.org/jira/browse/MESOS-1227).
 
 This issue seems to reproduce when Zookeeper died suddenly.  Master detector seems to enter zombie state.
 
